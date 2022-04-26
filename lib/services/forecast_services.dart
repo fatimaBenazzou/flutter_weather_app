@@ -4,7 +4,7 @@ import '../models/forecast_modal.dart';
 
 class WeatherApiForecast {
   Future<List> getCurrentweatherForecast(String? location) async {
-    var appid = ' '; // add app id
+    var appid = ''; // add app id
     var endpoint = Uri.parse(
         "https://api.openweathermap.org/data/2.5/forecast?q=$location&appid=$appid&units=metric");
     var response = await http.get(endpoint);
